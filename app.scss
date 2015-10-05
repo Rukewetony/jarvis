@@ -1,0 +1,49 @@
+@mixin absolute_center {
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+}
+
+@mixin display_h1 {
+	color: #fff;
+	font-size: 4em;
+	text-shadow: rgba(#000, .3) 0 0 5px;
+}
+body {
+	overflow-x: hidden;
+	max-width: 100vw;
+}
+
+.main {
+	margin-top: 100px;
+}
+
+.card {
+	.header {
+		background: url(img/cover.png);
+		background-size: cover;
+		height: 200px;
+		h1 {
+			@include display_h1;
+			text-align: center;
+			padding-top: 50px;
+		}
+		.avatar {
+			background: url(https://avatars1.githubusercontent.com/u/13699581?v=3&s=460);
+			background-size: cover;
+			height: 100px;
+			width: 100px;
+			border-radius: 50%;
+			top: 150px;
+			@include absolute_center;
+			&:hover {
+				transition-duration: 1s;
+				cursor: pointer;
+				background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(https://avatars1.githubusercontent.com/u/13699581?v=3&s=460);
+				background-size: cover;
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html ng-app="jarvis">
+<head>
+	<title>Jarvis App</title>
+	<link rel="stylesheet" href="bower_components/uikit/css/uikit.almost-flat.min.css">
+	<link rel="stylesheet" href="app.css">
+	
+</head>
+<body>
+	<div class="card" ng-controller="GoalsController as goal">
+		<div class="header">
+			<h1>{{goal.list.time}}</h1>
+			<div class="avatar"></div>
+		</div>
+	</div>
+	<div class="main">
+		<div class="uk-text-center">
+			<h1>Today</h1>
+			<h2>3h 30m to {{next-task}}</h2>
+			<div>
+				<h2>Stream on Livecoding</h2>
+
+
+			</div>
+		</div>
+
+	</div>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/velocity/velocity.min.js"></script>
+	<script src="bower_components/velocity/velocity.ui.min.js"></script>
+	<script src="window.js"></script>
+	
+</body>
+</html>
